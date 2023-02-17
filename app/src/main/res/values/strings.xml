@@ -1,0 +1,4 @@
+<resources>
+    <string name="button_text">Add Image</string>
+    <string name="app_name">ImageCombine</string>
+</resources>
