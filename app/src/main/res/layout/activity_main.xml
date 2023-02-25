@@ -12,37 +12,46 @@
            android:text="@string/button_text"
        /> -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ScrollView01"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
+<RelativeLayout
+    android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".MainActivity">
 
 
-<LinearLayout
-    android:id="@+id/cardview_holder"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/image_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <Button
+            android:id="@+id/add_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:onClick="fetchImageFromGallery"
+            android:text="Add Image" />
 
-<RelativeLayout
-    android:layout_alignParentBottom="true"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <Button
-        android:id="@+id/add_image"
-        android:layout_width="wrap_content"
-        android:text="Add Image"
-        android:onClick="fetchImageFromGallery"
-        android:layout_gravity="top"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+        <Button
+            android:id="@+id/save_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Horizontal" />
+
+        <Button
+            android:id="@+id/save_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Vertical" />
+
+    </LinearLayout>
 
 </RelativeLayout>
 </ScrollView>
